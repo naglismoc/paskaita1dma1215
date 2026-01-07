@@ -118,3 +118,20 @@ print(zeros,ones,twos)
 starWars = "Star Wars: Episode " + (" " * random.randint(1, 9)) + str(random.randint(1, 7)) + " - A New Hope"
 
 print(starWars)
+
+
+# Padarykite skaitmeninį laikrodį, rodantį valandas, minutes ir sekundes. Valandom, minutėm ir sekundėm sugeneruoti panaudokite funkciją random.randint(x,x). Sugeneruokite skaičių nuo 0 iki 300. Tai papildomos sekundės. Skaičių pridėkite prie jau sugeneruoto laiko. Atspausdinkite laikrodį prieš ir po sekundžių pridėjimo ir pridedamų sekundžių skaičių.
+
+h = random.randint(0,23)
+m = random.randint(0,59)
+s = random.randint(0,59)
+s_add = random.randint(0,300)
+h,m,s,s_add = 23,59,59,62
+print(h,m,s,s_add, sep=':')
+
+m += (s+s_add) // 60
+s = (s+s_add) % 60
+h = h + (m // 60) if h + m //60 < 24 else (h +  m //60) - 24
+m = m % 60
+
+print(h,m,s, sep=':')
