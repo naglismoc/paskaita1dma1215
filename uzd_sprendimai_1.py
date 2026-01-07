@@ -115,9 +115,6 @@ if r4 == 2:
 
 print(zeros,ones,twos)
 
-
-
-
 starWars = "Star Wars: Episode " + (" " * random.randint(1, 9)) + str(random.randint(1, 7)) + " - A New Hope"
 
 print(starWars)
